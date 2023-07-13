@@ -1,0 +1,45 @@
+-- learn more on https://cloud.google.com/dataform/docs/dependencies
+-- learn more on https://docs.dataform.co/guides/assertions/
+
+
+config {
+  type: "table",
+  tags: ["starship", "assertions"],
+  description: "This table contains data on the starships.",
+  columns: {
+    name: "Starship name",
+    model: "Starship model",
+    manufacturer: "Manufacturer Details",
+    length: "Length of the starship",
+    max_atmosphering_speed: "Max Speed",
+    cargo_capacity: "Cargo capacity",
+    consumables: "consumables",
+    hyperdrive_rating: "hyperdrive rating",
+    passengers: "Passengers capacity",
+    crew: "Crew capacity",
+    starship_class: "Class of the starship",
+    url: "Unique Identifier",
+    films: "Films Reference"
+  },
+  assertions: {
+    nonNull: ["name"],
+    uniqueKey: ["name"]
+  }
+}
+
+select
+    name,
+    model,
+    manufacturer,
+    length,
+    max_atmosphering_speed as max_speed,
+    cargo_capacity as capacity,
+    hyperdrive_rating,
+    passengers as passengers_capacity,
+    crew as crew_capacity,
+    starship_class as class,
+    url as id,
+    films
+from
+  ${ref("starships")} starships
+

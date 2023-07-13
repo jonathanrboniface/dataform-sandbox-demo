@@ -1,0 +1,13 @@
+config {
+  hasOutput: true,
+  type: "operations",
+  schema: dataform.projectConfig.vars.RAW_DATA,
+  tags: ["LOAD_DATA"],
+  name: "vehicles"
+}
+
+LOAD DATA OVERWRITE sandbox-johnny-boniface.dataform_training.vehicles
+FROM FILES (
+  format = "JSON",
+  uris = ["gs://training-workspace/vehicles/starwars_vehicles.json"]
+);

@@ -1,0 +1,42 @@
+-- https://cloud.google.com/dataform/docs/document-tables
+
+config {
+  type: "table",
+  tags: ["people", "documentation"],
+  description: "This table contains characters within the star wars movies",
+  columns:{
+    name: "Name of the character",
+    eye_color: "The eye color of the character",
+    gender: "The gender of the character",
+    mass: "The mass of the character",
+    hair_color: "The hair color of the character",
+    birth_year: "The date of birth of the character",
+    skin_color: "The skin color of the character",
+    height: "Character height",
+    films: "Films included",
+    homeworld: "The home planet unique identifier",
+    species: "The specie of the character",
+    vehicles: "The vehicles used by the character",
+    created: "The create timestamp",
+    edited: "The last edit timestamp",
+    url: "A unique identifier for the character"
+    }
+}
+
+SELECT  name as name,
+        eye_color as eye_color,
+        gender as gender,
+        mass as mass,
+        skin_color as skin_color,
+        birth_year as birth_year,
+        height as height,
+        films as films,
+        homeworld as homeworld,
+        species as species,
+        vehicles as vehicles,     
+        created as create_data,
+        edited as last_update_date,
+        url as ID,   
+
+FROM ${ref("people")} 
+

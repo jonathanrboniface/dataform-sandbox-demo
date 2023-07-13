@@ -1,0 +1,26 @@
+-- learn more on https://docs.dataform.co/guides/tables/
+-- learn more on https://cloud.google.com/dataform/docs/reference/dataform-core-reference#itableconfig
+
+
+config { 
+    type: "view",
+    tags: ["core", "hourly"],
+    disabled: false,
+    name: "people_planets",
+    materialized: true
+}
+
+SELECT  ${ref("people")}.name as name,
+        eye_color as eye_color,
+        gender as gender,
+        mass as mass,
+        skin_color as skin_color,
+        birth_year as birth_year,
+        height as height,
+        ${ref("planets")}.name as homeworld,
+        species as species,
+        vehicles as vehicles,     
+        ${ref("people")}.url as people_id, 
+
+FROM ${ref("people")} 
+inner join ${ref("planets")} on ${ref("people")}.homeworld = ${ref("planets")}.url

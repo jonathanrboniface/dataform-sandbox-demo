@@ -1,0 +1,12 @@
+{
+  "defaultSchema": "dataform_training",
+  "assertionSchema": "dataform_assertions",
+  "warehouse": "bigquery",
+  "defaultDatabase": "sandbox-johnny-boniface",
+  "defaultLocation": "EU",
+  "vars": {
+    "dataset_reference": "dataform_training",
+    "LOAD_GCS_BUCKET": "training-workspace",
+    "RAW_DATA": "dataform"
+  }
+}

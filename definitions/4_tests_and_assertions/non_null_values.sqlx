@@ -1,0 +1,13 @@
+-- learn more on https://cloud.google.com/dataform/docs/dependencies
+-- learn more on https://docs.dataform.co/guides/assertions/
+
+config { 
+    type: "assertion"
+}
+
+SELECT 
+  * 
+FROM 
+  ${ref("people_planets")} 
+WHERE
+  name IS NULL

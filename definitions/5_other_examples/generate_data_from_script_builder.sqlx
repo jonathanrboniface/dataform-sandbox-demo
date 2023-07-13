@@ -1,0 +1,10 @@
+config { 
+    type: "table",
+    tags: ["advanced", "hourly"],
+    disabled: true
+}
+
+${script_builder.render_script(ref("dataset_1"),
+                               ["country", "device_type"],
+                               ["revenue", "pageviews", "sessions"]
+                               )}

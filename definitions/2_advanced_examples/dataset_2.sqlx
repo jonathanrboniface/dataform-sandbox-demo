@@ -1,0 +1,28 @@
+-- learn more on https://docs.dataform.co/guides/tables/
+
+config { 
+    type: "table",
+    tags: ["core", "hourly"]
+}
+
+SELECT
+        t1.name as name,
+        t1.birth_year as birth_year,
+        t1.height as height,
+        t1.mass as mass,
+        t1.gender as gender,
+        t2.name as species,
+        t2.average_lifespan as average_lifespan,
+        t2.designation as designation,
+        t2.language as language,
+        t3.name as planet,
+        t3.terrain as terrain,
+        t3.population as population
+
+
+FROM ${ref("people")} t1,
+UNNEST(t1.species) as p
+inner join ${ref("species")} t2 on p = t2.url
+inner join ${ref("planets")} t3 on t1.homeworld = t3.url
+
+ORDER BY p

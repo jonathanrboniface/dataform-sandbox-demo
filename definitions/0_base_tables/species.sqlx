@@ -1,0 +1,12 @@
+-- learn more on https://cloud.google.com/dataform/docs/declare-source
+-- database == project id
+-- schema == bigquery dataset
+-- learn more on https://cloud.google.com/dataform/docs/configure-dataform
+-- variables
+
+config {
+  type: "declaration",
+  database: dataform.projectConfig.defaultDatabase,
+  schema: "dataform_training",
+  name: "species",
+}
