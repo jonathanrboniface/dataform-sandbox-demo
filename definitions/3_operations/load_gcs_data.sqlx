@@ -1,3 +1,6 @@
+-- learn more on https://docs.dataform.co/guides/operations/
+-- learn more on https://cloud.google.com/dataform/docs/custom-sql
+
 config {
   hasOutput: true,
   type: "operations",

@@ -1,5 +1,15 @@
 -- learn more on https://docs.dataform.co/guides/operations/
 -- learn more on https://cloud.google.com/dataform/docs/custom-sql
 
+config { 
+    type: "operations",
+    hasOutput: true //optional, lets you reference the empty table
+ }
 
-DELETE FROM ${ref("people")} WHERE name = "R2-D5"
+DELETE FROM ${ref("people")} WHERE name = "R2-D5";
+
+
+CREATE TABLE ${self()} (
+  x INT64,
+  y STRING
+);

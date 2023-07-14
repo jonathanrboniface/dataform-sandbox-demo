@@ -1,4 +1,6 @@
-// learn more on https://docs.dataform.co/guides/includes/
+/*
+learn more on https://cloud.google.com/dataform/docs/develop-workflows-js
+*/
 
 function random_number(min,max){
   return Math.floor(Math.random() * (max - min)) + min;
