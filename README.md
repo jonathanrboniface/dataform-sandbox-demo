@@ -58,5 +58,5 @@ Best Practices:
 Schema:
 - https://cloud.google.com/dataform/docs/reference/dataform-core-reference#itableconfig
 
-
-
+Table partitions and clusters
+- https://cloud.google.com/dataform/docs/partitions-clusters
