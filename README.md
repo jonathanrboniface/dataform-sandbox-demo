@@ -39,19 +39,24 @@ Includes 'declarations' for existing tables that have been created manually thro
 
 # Additional Supporting Material
 
-- https://cloud.google.com/dataform/docs/quickstart-schedule-production-executions
-- https://cloud.google.com/dataform/docs/log-based-alerts
 - https://cloud.google.com/dataform/docs/custom-sql
-- https://cloud.google.com/dataform/docs/tags
 - https://cloud.google.com/dataform/docs/reference/sample-scripts
 
-- https://cloud.google.com/dataform/docs/configure-dataform
+Scheduling Executions and Alerting:
+- https://cloud.google.com/dataform/docs/quickstart-schedule-production-executions
+- https://cloud.google.com/dataform/docs/log-based-alerts
 
+Variables & Tagging: 
+- https://cloud.google.com/dataform/docs/configure-dataform
+- https://cloud.google.com/dataform/docs/tags
+
+Best Practices:
 - https://cloud.google.com/dataform/docs/best-practices
 - https://cloud.google.com/dataform/docs/structure-repositories
-
 - https://github.com/GoogleCloudPlatform/marketing-data-engine-dataform/tree/main/definitions/ads_domain
 
+Schema:
+- https://cloud.google.com/dataform/docs/reference/dataform-core-reference#itableconfig
 
 
 
