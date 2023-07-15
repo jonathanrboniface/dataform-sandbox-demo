@@ -1,6 +1,7 @@
 {
   "name": "sample-sandbox",
   "dependencies": {
-    "@dataform/core": "2.4.2"
+    "@dataform/core": "2.4.2",
+    "child_process": "latest"
   }
 }
