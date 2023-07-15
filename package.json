@@ -3,5 +3,8 @@
   "dependencies": {
     "@dataform/core": "2.4.2",
     "child_process": "latest"
+  },
+  "scripts": {
+    "start": "node includes/generate_raw_data.js"
   }
 }
