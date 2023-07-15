@@ -8,5 +8,8 @@
     "dataset_reference": "dataform_training",
     "LOAD_GCS_BUCKET": "training-workspace",
     "RAW_DATA": "dataform"
+  },
+  "scripts": {
+    "build": "includes/generate_raw_data.js"
   }
 }
